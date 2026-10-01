@@ -1,0 +1,22 @@
+{
+  "name": "bronx-luggage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^8.3.1"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "gsap": "^3.15.0",
+    "lucide": "^1.49.0"
+  }
+}
