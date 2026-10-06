@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRONX LUGGAGE — Indestructible Aerospace Engineering & Modernist Travel</title>
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NOTIFICATION BAR (PROMISE OF EXCELLENCE)
+       ======================================================================== -->
+  <aside class="announcement-bar" style="background: var(--bg-surface-elevated); border-bottom: 1px solid var(--border-subtle); padding: 0.5rem 1rem; font-size: 0.775rem; text-align: center; color: var(--text-secondary); display: flex; align-items: center; justify-content: center; gap: 1rem; z-index: 101; position: relative;">
+    <span>⚡ <strong>100-DAY WORLDWIDE FLIGHT TRIAL:</strong> Test on real flights. If not obsessed, return for 100% refund.</span>
+    <span style="opacity: 0.4;">|</span>
+    <span class="mono" style="color: var(--accent-cyan); font-weight: 700;">FREE GLOBAL EXPRESS OVER $200</span>
+  </aside>
+
+  <!-- ========================================================================
+       SITE HEADER / NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrapper">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="Bronx Luggage Home">
+        <div class="brand-symbol"></div>
+        <span>BRONX</span>
+        <span class="brand-text-accent">NYC LABS</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links">
+        <a href="#unboxing" class="nav-link">Bag Anatomy</a>
+        <a href="subpages/products.html" class="nav-link">Products</a>
+        <a href="#airline-checker" class="nav-link">Size Compliance</a>
+        <a href="#durability" class="nav-link">Durability Lab</a>
+        <a href="#weight-calc" class="nav-link">Weight Estimator</a>
+        <a href="#about" class="nav-link">The Foundry</a>
+      </nav>
+
+      <!-- Navigation Actions & Controls -->
+      <div class="nav-actions">
+        
+        <!-- Day / Night Mode Toggle Switch -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Day or Night Mode" title="Switch Day / Night Color Theme">
+          <!-- Sun Icon (Active in Light mode) -->
+          <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (Active in Dark mode) -->
+          <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Sound FX Audio Toggle -->
+        <button class="sound-toggle-btn" id="soundToggleBtn" aria-label="Toggle Sound Effects" title="Toggle Mechanical Sound FX">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </button>
+
+        <!-- Bag Finder Quiz Trigger in Header -->
+        <button class="btn btn-outline btn-sm" id="navQuizBtn">
+          <span>Luggage Quiz</span>
+        </button>
+
+        <!-- Slide-out Cart Trigger -->
+        <button class="cart-trigger-btn" id="cartTriggerBtn" aria-label="Open Shopping Bag">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-3z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span>Bag</span>
+          <span class="cart-badge" id="cartCountBadge">1</span>
+        </button>
+
+        <!-- Mobile Nav Hamburger -->
+        <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION (SUPER MODERNIST, LUXURY INDUSTRIAL, GSAP POWERED)
+       ======================================================================== -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="hero-glow-blob"></div>
+
+      <div class="container hero-grid">
+        
+        <!-- Left Hero Typography & Actions -->
+        <div class="hero-content">
+          <div class="badge hero-badge">
+            <span class="badge-dot"></span>
+            <span>AEROSPACE GRADE 6061-T6 ALUMINUM • 2026 EDITION</span>
+          </div>
+
+          <h1 class="hero-title">
+            ENGINEERED TO OUTLIVE <br />
+            <span class="title-accent">THE DESTINATION.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Forged in the South Bronx industrial foundry. The world’s first zipperless, indestructible luggage chassis engineered with dual TSA biometric latches, whisper-quiet Hinomoto 360° suspension wheels, and 100% recycled German Makrolon® polycarbonate.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#unboxing" class="btn btn-primary" id="heroSimulateBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+              <span>Explore Bag Opening</span>
+            </a>
+
+            <a href="#products" class="btn btn-outline">
+              <span>View Flagship Models</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <button class="btn btn-outline" id="openQuizBtn" style="border-style: dashed;">
+              <span>Take 30s Luggage Quiz</span>
+            </button>
+          </div>
+
+          <!-- Hero Live Telemetry Stats -->
+          <div class="hero-telemetry">
+            <div class="telemetry-item">
+              <div class="telemetry-value">
+                <span>3.4</span>
+                <span class="telemetry-unit">KG</span>
+              </div>
+              <span class="telemetry-label">Ultra-Light Frame</span>
+            </div>
+
+            <div class="telemetry-item">
+              <div class="telemetry-value">
+                <span>100</span>
+                <span class="telemetry-unit">%</span>
+              </div>
+              <span class="telemetry-label">Airline Bin Fit</span>
+            </div>
+
+            <div class="telemetry-item">
+              <div class="telemetry-value">
+                <span>∞</span>
+                <span class="telemetry-unit">YRS</span>
+              </div>
+              <span class="telemetry-label">Lifetime Warranty</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive 3D Showcase & Hotspots -->
+        <div class="hero-visual-stage" id="heroLuggageStage">
+          <div class="luggage-pedestal"></div>
+
+          <!-- 3D Suitcase Model Container -->
+          <div class="luggage-3d-wrapper" id="heroLuggageBox">
+            
+            <!-- Hotspot 1: Ergonomic Carbon Handle -->
+            <div class="hero-hotspot" style="top: 8%; left: 50%;">
+              <div class="hotspot-beacon"></div>
+              <div class="hotspot-card">
+                <div class="hotspot-title">Carbon Telescoping Handle</div>
+                <div class="hotspot-desc">Aircraft 3-stage extension with zero wobble</div>
+              </div>
+            </div>
+
+            <!-- Hotspot 2: Aerospace Aluminum Chassis -->
+            <div class="hero-hotspot" style="top: 32%; left: 16%;">
+              <div class="hotspot-beacon"></div>
+              <div class="hotspot-card">
+                <div class="hotspot-title">6061-T6 Aluminum Armor</div>
+                <div class="hotspot-desc">2.5m drop-tested indestructible corner caps</div>
+              </div>
+            </div>
+
+            <!-- Hotspot 3: Biometric TSA Latch (No Zippers!) -->
+            <div class="hero-hotspot" style="top: 50%; left: 82%;">
+              <div class="hotspot-beacon"></div>
+              <div class="hotspot-card">
+                <div class="hotspot-title">Zipperless Dual TSA Lock</div>
+                <div class="hotspot-desc">Zero zipper burst risk. Dual biometric latches</div>
+              </div>
+            </div>
+
+            <!-- Hotspot 4: Hinomoto Lisof 360° Wheels -->
+            <div class="hero-hotspot" style="top: 90%; left: 30%;">
+              <div class="hotspot-beacon"></div>
+              <div class="hotspot-card">
+                <div class="hotspot-title">Hinomoto Lisof® Wheels</div>
+                <div class="hotspot-desc">Japanese ultra-silent 360° ball bearings</div>
+              </div>
+            </div>
+
+            <!-- Interactive Suitcase SVG Graphic -->
+            <svg viewBox="0 0 320 480" width="300" height="460" xmlns="http://www.w3.org/2000/svg" class="hero-svg-model">
+              <defs>
+                <linearGradient id="heroShellGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--luggage-gradient-start)" />
+                  <stop offset="50%" stop-color="var(--luggage-gradient-mid)" />
+                  <stop offset="100%" stop-color="var(--luggage-gradient-end)" />
+                </linearGradient>
+                <linearGradient id="heroMetalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="var(--luggage-metal-start)" />
+                  <stop offset="50%" stop-color="var(--luggage-metal-mid)" />
+                  <stop offset="100%" stop-color="var(--luggage-metal-end)" />
+                </linearGradient>
+                <filter id="heroShadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.45"/>
+                </filter>
+              </defs>
+
+              <!-- Telescoping Handle -->
+              <g id="heroHandle">
+                <rect x="125" y="10" width="8" height="60" fill="url(#heroMetalGrad)" rx="3" />
+                <rect x="187" y="10" width="8" height="60" fill="url(#heroMetalGrad)" rx="3" />
+                <rect x="105" y="6" width="110" height="16" fill="var(--luggage-body)" rx="8" stroke="var(--border-medium)" stroke-width="2" />
+                <rect x="135" y="10" width="50" height="8" fill="var(--bg-surface-elevated)" rx="4" />
+              </g>
+
+              <!-- Main Suitcase Chassis Body -->
+              <rect x="35" y="60" width="250" height="370" rx="30" fill="url(#heroShellGrad)" stroke="var(--border-medium)" stroke-width="3" filter="url(#heroShadow)" />
+
+              <!-- Vertical Aerospace Grooves / Ribs -->
+              <g stroke="var(--border-medium)" stroke-width="2" opacity="0.7">
+                <line x1="75" y1="90" x2="75" y2="400" />
+                <line x1="95" y1="85" x2="95" y2="405" />
+                <line x1="115" y1="80" x2="115" y2="410" />
+                <line x1="135" y1="75" x2="135" y2="415" />
+                <line x1="160" y1="65" x2="160" y2="425" stroke="var(--accent-cyan)" stroke-width="2.5" opacity="0.9" />
+                <line x1="185" y1="75" x2="185" y2="415" />
+                <line x1="205" y1="80" x2="205" y2="410" />
+                <line x1="225" y1="85" x2="225" y2="405" />
+                <line x1="245" y1="90" x2="245" y2="400" />
+              </g>
+
+              <!-- Center Spine Aluminum Rim -->
+              <rect x="157" y="60" width="6" height="370" fill="url(#heroMetalGrad)" />
+
+              <!-- Dual TSA008 Biometric Latches -->
+              <g id="heroTSALockTop" transform="translate(148, 140)">
+                <rect width="24" height="42" rx="5" fill="var(--bg-surface)" stroke="var(--border-medium)" stroke-width="1.5" />
+                <rect x="4" y="8" width="16" height="6" fill="var(--bg-surface-elevated)" rx="2" />
+                <circle cx="12" cy="28" r="3" fill="var(--accent-cyan)" />
+              </g>
+
+              <g id="heroTSALockBottom" transform="translate(148, 300)">
+                <rect width="24" height="42" rx="5" fill="var(--bg-surface)" stroke="var(--border-medium)" stroke-width="1.5" />
+                <rect x="4" y="8" width="16" height="6" fill="var(--bg-surface-elevated)" rx="2" />
+                <circle cx="12" cy="28" r="3" fill="var(--accent-cyan)" />
+              </g>
+
+              <!-- Aluminum Reinforced Corner Caps -->
+              <path d="M 35 95 C 35 75, 45 60, 70 60 L 70 85 C 55 85, 45 95, 45 110 Z" fill="url(#heroMetalGrad)" />
+              <path d="M 285 95 C 285 75, 275 60, 250 60 L 250 85 C 265 85, 275 95, 275 110 Z" fill="url(#heroMetalGrad)" />
+              <path d="M 35 395 C 35 415, 45 430, 70 430 L 70 405 C 55 405, 45 395, 45 380 Z" fill="url(#heroMetalGrad)" />
+              <path d="M 285 395 C 285 415, 275 430, 250 430 L 250 405 C 265 405, 275 395, 275 380 Z" fill="url(#heroMetalGrad)" />
+
+              <!-- Side Ergonomic Handle -->
+              <rect x="22" y="210" width="14" height="70" rx="5" fill="var(--bg-surface)" stroke="var(--border-medium)" stroke-width="1.5" />
+
+              <!-- Hinomoto 360 Caster Wheels -->
+              <g id="heroWheelLeft" transform="translate(60, 422)">
+                <rect x="8" y="0" width="8" height="14" fill="var(--border-medium)" rx="2" />
+                <circle cx="12" cy="22" r="14" fill="var(--bg-surface-elevated)" stroke="var(--border-medium)" stroke-width="3" />
+                <circle cx="12" cy="22" r="6" fill="url(#heroMetalGrad)" />
+              </g>
+
+              <g id="heroWheelRight" transform="translate(225, 422)">
+                <rect x="8" y="0" width="8" height="14" fill="var(--border-medium)" rx="2" />
+                <circle cx="12" cy="22" r="14" fill="var(--bg-surface-elevated)" stroke="var(--border-medium)" stroke-width="3" />
+                <circle cx="12" cy="22" r="6" fill="url(#heroMetalGrad)" />
+              </g>
+            </svg>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CORE ANIMATION REQUIREMENT: BAG OPENING & UNPACKING ARENA
+         Scroll-driven animation & Interactive Hydraulic Unlatch Simulator
+         ======================================================================== -->
+    <section class="unboxing-section" id="unboxing">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>PATENTED SPLIT-CHASSIS ARCHITECTURE</span>
+          </div>
+          <h2 class="section-title">THE ANATOMY OF PACKING PERFECTION</h2>
+          <p class="section-subtitle">
+            Witness the seamless 180° clamshell opening sequence. Dual hydraulic latches disengage silently, revealing an aerospace modular interior designed to pack 2 weeks into carry-on dimensions.
+          </p>
+        </div>
+
+        <!-- Bag Opening Interactive Simulator Console -->
+        <div class="bag-simulator-container">
+          
+          <div class="bag-control-bar">
+            <div class="bag-status-indicator">
+              <span class="status-beacon-light" id="bagStatusBeacon"></span>
+              <span class="mono" style="font-size: 0.85rem;" id="bagStatusText">STATUS: CHASSIS SEALED (DUAL TSA ENGAGED)</span>
+            </div>
+
+            <!-- Interactive Scrubbing Slider for Total Fluid Control -->
+            <div class="bag-scrubber-wrap">
+              <span class="mono" style="font-size: 0.75rem; color: var(--text-muted);">SCRUB OPENING:</span>
+              <input type="range" min="0" max="100" value="0" id="bagScrubSlider" class="bag-range-slider" aria-label="Scrub opening progress" />
+              <span class="mono" id="bagScrubPct" style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700;">0%</span>
+            </div>
+
+            <!-- Clean Working Interactive Controls -->
+            <div class="bag-action-buttons">
+              <button class="bag-action-btn active" id="btnToggleBagOpen">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v18"></path>
+                  <path d="M3 12h18"></path>
+                </svg>
+                <span id="btnBagOpenLabel">OPEN LUGGAGE</span>
+              </button>
+
+              <button class="bag-action-btn" id="btnExplodeView">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                <span>X-RAY EXPLODED VIEW</span>
+              </button>
+
+              <button class="bag-action-btn" id="btnSoundTrigger">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+                <span>TEST HAPTIC LATCH CLICK</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- THE DYNAMIC ANIMATED LUGGAGE ARENA -->
+          <div class="luggage-stage-arena" id="clamshellArena">
+            
+            <!-- Clamshell Chassis Wrapper (Opens with GSAP) -->
+            <div class="clamshell-chassis" id="chassisModel">
+              
+              <!-- Left Shell (Hinges Open Left) -->
+              <div class="shell-half shell-left" id="shellLeft">
+                <div class="corner-bumper bumper-tl"></div>
+                <div class="corner-bumper bumper-bl"></div>
+                
+                <!-- Exterior Ribs -->
+                <div class="shell-ribs">
+                  <div class="shell-rib"></div>
+                  <div class="shell-rib"></div>
+                  <div class="shell-rib"></div>
+                  <div class="shell-rib"></div>
+                </div>
+
+                <!-- Interior Left (Revealed on Open) -->
+                <div class="interior-compartment" id="interiorLeft">
+                  <div class="interior-fabric-grid"></div>
+                  <div style="font-weight: 700; font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 0.5rem; text-transform: uppercase;">
+                    Tech & Garment Vault
+                  </div>
+                  <!-- Compression Straps Graphic -->
+                  <div style="width: 100%; height: 3px; background: var(--accent-cyan); opacity: 0.8; margin: 35px 0;"></div>
+                  <div style="width: 100%; height: 3px; background: var(--accent-cyan); opacity: 0.8; margin: 35px 0;"></div>
+                  <div style="text-align: center; margin-top: auto; font-size: 0.725rem; color: var(--text-muted); font-weight: 600;">
+                    Fidlock® Magnetic Compression System
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Shell (Hinges Open Right) -->
+              <div class="shell-half shell-right" id="shellRight">
+                <div class="corner-bumper bumper-tr"></div>
+                <div class="corner-bumper bumper-br"></div>
+                
+                <!-- Exterior Ribs -->
+                <div class="shell-ribs">
+                  <div class="shell-rib"></div>
+                  <div class="shell-rib"></div>
+                  <div class="shell-rib"></div>
+                  <div class="shell-rib"></div>
+                </div>
+
+                <!-- Interior Right (Revealed on Open) -->
+                <div class="interior-compartment" id="interiorRight">
+                  <div class="interior-fabric-grid"></div>
+                  <div style="font-weight: 700; font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 0.5rem; text-transform: uppercase;">
+                    Expandable Dry/Wet Cell
+                  </div>
+                  <div style="width: 100%; height: 2px; background: var(--text-muted); opacity: 0.5; margin: 30px 0;"></div>
+                  <div style="text-align: center; margin-top: auto; font-size: 0.725rem; color: var(--text-muted); font-weight: 600;">
+                    YKK AquaGuard® Waterproof Barrier
+                  </div>
+                </div>
+              </div>
+
+              <!-- Center Locking Latch Mechanism (Disengages on Open) -->
+              <div class="tsa-latch" id="centerLatch">
+                <div class="tsa-led" id="latchLed"></div>
+                <div class="tsa-keyhole"></div>
+                <div style="font-size: 6px; font-weight: 800; color: #a1a1aa; font-family: var(--font-mono);">TSA08</div>
+              </div>
+
+              <!-- Telescopic Handle -->
+              <div class="telescope-handle" id="chassisHandle">
+                <div class="handle-grip"></div>
+                <div class="handle-rods">
+                  <div class="handle-rod"></div>
+                  <div class="handle-rod"></div>
+                </div>
+              </div>
+
+              <!-- Wheels -->
+              <div class="luggage-wheel wheel-fl"></div>
+              <div class="luggage-wheel wheel-fr"></div>
+
+            </div>
+
+            <!-- UNPACKED FLOATING COMPARTMENT PODS (Staggered GSAP floating layer) -->
+            <div class="unpacked-item-layer" id="unpackedItemLayer">
+              
+              <!-- Pod 1: 16" MacBook Aerogel Sleeve -->
+              <div class="modular-pod pod-tech" id="podTech">
+                <div class="pod-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <div>
+                  <div class="pod-title">16" Shockproof Tech Sleeve</div>
+                  <div class="pod-meta">Aerogel impact barrier • Quick TSA access</div>
+                </div>
+              </div>
+
+              <!-- Pod 2: Fidlock Magnetic Compression -->
+              <div class="modular-pod pod-fidlock" id="podFidlock">
+                <div class="pod-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                    <circle cx="12" cy="5" r="2"></circle>
+                    <path d="M12 7v4"></path>
+                    <line x1="8" y1="16" x2="8" y2="16"></line>
+                    <line x1="16" y1="16" x2="16" y2="16"></line>
+                  </svg>
+                </div>
+                <div>
+                  <div class="pod-title">Fidlock® Magnetic Pad</div>
+                  <div class="pod-meta">Compacts 12 garments into wrinkle-free 40% volume</div>
+                </div>
+              </div>
+
+              <!-- Pod 3: Leakproof Toiletry Capsule -->
+              <div class="modular-pod pod-toiletry" id="podToiletry">
+                <div class="pod-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="pod-title">Watertight TPU Capsule</div>
+                  <div class="pod-meta">Zero shampoo spill leak guarantee</div>
+                </div>
+              </div>
+
+              <!-- Pod 4: Antimicrobial Laundry Cell -->
+              <div class="modular-pod pod-laundry" id="podLaundry">
+                <div class="pod-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="pod-title">Silver-Ion Laundry Pouch</div>
+                  <div class="pod-meta">Odor-neutralizing expandable shoe pocket</div>
+                </div>
+              </div>
+
+              <!-- Pod 5: Concealed Biometric / GPS AirTag Vault -->
+              <div class="modular-pod pod-airtag" id="podAirtag">
+                <div class="pod-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="pod-title">Embedded Tracker Vault</div>
+                  <div class="pod-meta">Concealed spine dock for Apple AirTag or Tile</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Technical Spec Breakdown Grid Below The Bag Stage -->
+          <div class="feature-spec-drawer">
+            <div class="spec-tile">
+              <div class="spec-tile-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <div class="spec-tile-title">Zero Zipper Blowouts</div>
+              <div class="spec-tile-body">Zippers are the #1 point of luggage failure. Bronx uses extruded aluminum interlocking channels sealed with neoprene gaskets.</div>
+            </div>
+
+            <div class="spec-tile">
+              <div class="spec-tile-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <div class="spec-tile-title">Whisper Hinomoto Wheels</div>
+              <div class="spec-tile-body">Custom Japanese Lisof® polyurethane wheels glide effortlessly across uneven cobblestones and airport carpets with zero decibel rumble.</div>
+            </div>
+
+            <div class="spec-tile">
+              <div class="spec-tile-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="spec-tile-title">Self-Healing German Shell</div>
+              <div class="spec-tile-body">Multi-layer virgin polycarbonate shell flexes under 250 lbs of crush pressure and rebounds instantly without permanent denting.</div>
+            </div>
+
+            <div class="spec-tile">
+              <div class="spec-tile-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div class="spec-tile-title">Modular Repairability</div>
+              <div class="spec-tile-body">Never throw away luggage. Every single wheel, latch, and handle unscrews with one included hex key. Free replacement parts shipped in 48h.</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         FEATURED PRODUCTS SECTION
+         Real dynamic color swatches, filter tags, interactive quick view & add-to-cart
+         ======================================================================== -->
+    <section class="products-section" id="products">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>2026 BRONX PRODUCT FLEET</span>
+          </div>
+          <h2 class="section-title">BUILT FOR EVERY EXPEDITION</h2>
+          <p class="section-subtitle">
+            From quick 48-hour sprints to 30-day overseas odysseys. Choose your aerospace armor.
+          </p>
+        </div>
+
+        <!-- Filter Categories -->
+        <div class="product-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Models (5)</button>
+          <button class="filter-btn" data-filter="carry-on">Carry-On Series</button>
+          <button class="filter-btn" data-filter="check-in">Check-In Heavy</button>
+          <button class="filter-btn" data-filter="modular">Modular Packs</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+          
+          <!-- PRODUCT 1: BRONX X1 PRO CARRY-ON -->
+          <div class="product-card" data-category="carry-on" data-id="bx-x1">
+            <div class="product-badge-top">
+              <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.3);">
+                IATA BIN APPROVED
+              </span>
+            </div>
+
+            <div class="product-img-wrapper">
+              <!-- Interactive SVG Suitcase Render -->
+              <svg viewBox="0 0 160 240" class="product-render-svg product-svg-x1">
+                <rect x="25" y="30" width="110" height="175" rx="18" class="prod-shell-body" fill="#1e2230" stroke="#475569" stroke-width="2" />
+                <line x1="80" y1="30" x2="80" y2="205" stroke="var(--accent-cyan)" stroke-width="2" />
+                <g stroke="#334155" stroke-width="1.5">
+                  <line x1="45" y1="50" x2="45" y2="185" />
+                  <line x1="60" y1="45" x2="60" y2="190" />
+                  <line x1="100" y1="45" x2="100" y2="190" />
+                  <line x1="115" y1="50" x2="115" y2="185" />
+                </g>
+                <rect x="73" y="70" width="14" height="24" rx="3" fill="#0f172a" stroke="#94a3b8" />
+                <rect x="73" y="140" width="14" height="24" rx="3" fill="#0f172a" stroke="#94a3b8" />
+                <rect x="60" y="8" width="40" height="12" rx="4" fill="#1e293b" stroke="#64748b" />
+                <line x1="68" y1="20" x2="68" y2="30" stroke="#94a3b8" stroke-width="3" />
+                <line x1="92" y1="20" x2="92" y2="30" stroke="#94a3b8" stroke-width="3" />
+                <circle cx="45" cy="212" r="8" fill="#090a0f" stroke="#64748b" stroke-width="2" />
+                <circle cx="115" cy="212" r="8" fill="#090a0f" stroke="#64748b" stroke-width="2" />
+              </svg>
+
+              <button class="btn btn-outline btn-sm quick-view-btn" data-product="bx-x1">Quick View</button>
+            </div>
+
+            <div class="product-details">
+              <!-- Color Swatches -->
+              <div class="product-swatches">
+                <span class="swatch active" style="background: #1e2230;" data-color="#1e2230" title="Midnight Obsidian"></span>
+                <span class="swatch" style="background: #94a3b8;" data-color="#94a3b8" title="Aerospace Titanium"></span>
+                <span class="swatch" style="background: #d4a373;" data-color="#d4a373" title="Mojave Dune"></span>
+                <span class="swatch" style="background: #1e3a8a;" data-color="#1e3a8a" title="Deep Cobalt"></span>
+              </div>
+
+              <h3 class="product-name">Bronx X1 Pro Carry-On</h3>
+              <p class="product-summary">The benchmark for global flight. Engineered with zero zippers, dual TSA biometric latches, and silent Hinomoto casters.</p>
+
+              <div class="product-specs-row">
+                <div class="product-spec-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                  <span>38 Liters</span>
+                </div>
+                <div class="product-spec-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  <span>3.4 kg (7.5 lbs)</span>
+                </div>
+                <div class="product-spec-item">
+                  <span>21.7" × 14.4" × 9.0"</span>
+                </div>
+              </div>
+
+              <div class="product-card-footer">
+                <div class="product-price-block">
+                  <div class="product-price">$385</div>
+                  <div class="product-rating">★★★★★ <span>4.9 (1,840)</span></div>
+                </div>
+
+                <button class="btn btn-primary btn-sm btn-add-cart" data-name="Bronx X1 Pro Carry-On" data-price="385" data-color="Midnight Obsidian">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 2: BRONX X2 CONTINENTAL CHECK-IN -->
+          <div class="product-card" data-category="check-in" data-id="bx-x2">
+            <div class="product-badge-top">
+              <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border-color: rgba(245, 158, 11, 0.3);">
+                BESTSELLER EXPEDITION
+              </span>
+            </div>
+
+            <div class="product-img-wrapper">
+              <svg viewBox="0 0 160 240" class="product-render-svg product-svg-x2">
+                <rect x="20" y="24" width="120" height="185" rx="20" class="prod-shell-body" fill="#161820" stroke="#475569" stroke-width="2" />
+                <line x1="80" y1="24" x2="80" y2="209" stroke="var(--accent-cyan)" stroke-width="2.5" />
+                <g stroke="#334155" stroke-width="1.5">
+                  <line x1="40" y1="45" x2="40" y2="190" />
+                  <line x1="56" y1="40" x2="56" y2="195" />
+                  <line x1="104" y1="40" x2="104" y2="195" />
+                  <line x1="120" y1="45" x2="120" y2="190" />
+                </g>
+                <rect x="73" y="65" width="14" height="24" rx="3" fill="#0f172a" stroke="#94a3b8" />
+                <rect x="73" y="145" width="14" height="24" rx="3" fill="#0f172a" stroke="#94a3b8" />
+                <rect x="55" y="6" width="50" height="12" rx="4" fill="#1e293b" stroke="#64748b" />
+                <circle cx="42" cy="216" r="9" fill="#090a0f" stroke="#64748b" stroke-width="2" />
+                <circle cx="118" cy="216" r="9" fill="#090a0f" stroke="#64748b" stroke-width="2" />
+              </svg>
+
+              <button class="btn btn-outline btn-sm quick-view-btn" data-product="bx-x2">Quick View</button>
+            </div>
+
+            <div class="product-details">
+              <div class="product-swatches">
+                <span class="swatch active" style="background: #161820;" data-color="#161820" title="Midnight Obsidian"></span>
+                <span class="swatch" style="background: #94a3b8;" data-color="#94a3b8" title="Aerospace Titanium"></span>
+                <span class="swatch" style="background: #2b3a4a;" data-color="#2b3a4a" title="Deep Marine"></span>
+              </div>
+
+              <h3 class="product-name">Bronx X2 Continental Check-In</h3>
+              <p class="product-summary">Built for 7 to 14-day international journeys. Massive internal volume with reinforced corner bumpers and drop-proof chassis.</p>
+
+              <div class="product-specs-row">
+                <div class="product-spec-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                  <span>74 Liters</span>
+                </div>
+                <div class="product-spec-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  <span>4.8 kg (10.5 lbs)</span>
+                </div>
+                <div class="product-spec-item">
+                  <span>26.8" × 18.5" × 11.0"</span>
+                </div>
+              </div>
+
+              <div class="product-card-footer">
+                <div class="product-price-block">
+                  <div class="product-price">$445</div>
+                  <div class="product-rating">★★★★★ <span>4.95 (960)</span></div>
+                </div>
+
+                <button class="btn btn-primary btn-sm btn-add-cart" data-name="Bronx X2 Continental Check-In" data-price="445" data-color="Midnight Obsidian">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 3: BRONX X3 HEAVY TRUNK -->
+          <div class="product-card" data-category="check-in" data-id="bx-x3">
+            <div class="product-badge-top">
+              <span class="badge" style="background: rgba(147, 51, 234, 0.15); color: #a855f7; border-color: rgba(147, 51, 234, 0.3);">
+                MAXIMUM CARGO 105L
+              </span>
+            </div>
+
+            <div class="product-img-wrapper">
+              <svg viewBox="0 0 160 240" class="product-render-svg product-svg-x3">
+                <rect x="25" y="16" width="110" height="195" rx="16" class="prod-shell-body" fill="#181a24" stroke="#475569" stroke-width="2.5" />
+                <line x1="80" y1="16" x2="80" y2="211" stroke="var(--accent-cyan)" stroke-width="2" />
+                <rect x="73" y="55" width="14" height="24" rx="3" fill="#0f172a" stroke="#94a3b8" />
+                <rect x="73" y="115" width="14" height="24" rx="3" fill="#0f172a" stroke="#94a3b8" />
+                <rect x="73" y="170" width="14" height="24" rx="3" fill="#0f172a" stroke="#94a3b8" />
+                <circle cx="45" cy="218" r="9" fill="#090a0f" stroke="#64748b" stroke-width="2" />
+                <circle cx="115" cy="218" r="9" fill="#090a0f" stroke="#64748b" stroke-width="2" />
+              </svg>
+
+              <button class="btn btn-outline btn-sm quick-view-btn" data-product="bx-x3">Quick View</button>
+            </div>
+
+            <div class="product-details">
+              <div class="product-swatches">
+                <span class="swatch active" style="background: #181a24;" data-color="#181a24" title="Midnight Obsidian"></span>
+                <span class="swatch" style="background: #94a3b8;" data-color="#94a3b8" title="Aerospace Titanium"></span>
+              </div>
+
+              <h3 class="product-name">Bronx X3 Heavy Trunk Edition</h3>
+              <p class="product-summary">The heavy-duty globe trotter. Deep 80/20 trunk layout allows easy packing of bulky equipment, coats, and boots.</p>
+
+              <div class="product-specs-row">
+                <div class="product-spec-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                  <span>105 Liters</span>
+                </div>
+                <div class="product-spec-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  <span>5.9 kg (13 lbs)</span>
+                </div>
+                <div class="product-spec-item">
+                  <span>30.0" × 16.5" × 14.5"</span>
+                </div>
+              </div>
+
+              <div class="product-card-footer">
+                <div class="product-price-block">
+                  <div class="product-price">$520</div>
+                  <div class="product-rating">★★★★★ <span>4.9 (420)</span></div>
+                </div>
+
+                <button class="btn btn-primary btn-sm btn-add-cart" data-name="Bronx X3 Heavy Trunk Edition" data-price="520" data-color="Midnight Obsidian">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 4: BRONX APEX MODULAR DUFFEL -->
+          <div class="product-card" data-category="modular" data-id="bx-duffel">
+            <div class="product-badge-top">
+              <span class="badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">
+                BALLISTIC HYBRID
+              </span>
+            </div>
+
+            <div class="product-img-wrapper">
+              <svg viewBox="0 0 160 240" class="product-render-svg product-svg-duffel">
+                <rect x="25" y="70" width="110" height="100" rx="14" class="prod-shell-body" fill="#151722" stroke="#475569" stroke-width="2" />
+                <path d="M 45 70 C 45 40, 115 40, 115 70" stroke="#94a3b8" stroke-width="5" fill="none" />
+                <line x1="25" y1="120" x2="135" y2="120" stroke="var(--accent-cyan)" stroke-width="2" />
+                <rect x="50" y="100" width="60" height="40" rx="6" fill="#0f1118" stroke="#334155" />
+              </svg>
+
+              <button class="btn btn-outline btn-sm quick-view-btn" data-product="bx-duffel">Quick View</button>
+            </div>
+
+            <div class="product-details">
+              <div class="product-swatches">
+                <span class="swatch active" style="background: #151722;" data-color="#151722" title="Obsidian"></span>
+                <span class="swatch" style="background: #3f4238;" data-color="#3f4238" title="Ranger Olive"></span>
+              </div>
+
+              <h3 class="product-name">Apex Modular Tech Duffel</h3>
+              <p class="product-summary">1000D Cordura ballistic nylon exterior with magnetic trolley sleeve that slides securely over any Bronx luggage handle.</p>
+
+              <div class="product-specs-row">
+                <div class="product-spec-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                  <span>32 Liters</span>
+                </div>
+                <div class="product-spec-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  <span>1.8 kg (3.9 lbs)</span>
+                </div>
+                <div class="product-spec-item">
+                  <span>Pass-Through</span>
+                </div>
+              </div>
+
+              <div class="product-card-footer">
+                <div class="product-price-block">
+                  <div class="product-price">$240</div>
+                  <div class="product-rating">★★★★★ <span>4.88 (610)</span></div>
+                </div>
+
+                <button class="btn btn-primary btn-sm btn-add-cart" data-name="Apex Modular Tech Duffel" data-price="240" data-color="Obsidian">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 5: BRONX COMMUTER EDC PACK -->
+          <div class="product-card" data-category="modular" data-id="bx-backpack">
+            <div class="product-badge-top">
+              <span class="badge" style="background: rgba(236, 72, 153, 0.15); color: #ec4899; border-color: rgba(236, 72, 153, 0.3);">
+                DAILY ARMOR
+              </span>
+            </div>
+
+            <div class="product-img-wrapper">
+              <svg viewBox="0 0 160 240" class="product-render-svg product-svg-backpack">
+                <rect x="35" y="45" width="90" height="150" rx="16" class="prod-shell-body" fill="#141724" stroke="#475569" stroke-width="2" />
+                <path d="M 45 45 Q 80 15 115 45" stroke="#94a3b8" stroke-width="4" fill="none" />
+                <line x1="35" y1="100" x2="125" y2="100" stroke="var(--accent-cyan)" stroke-width="2" />
+                <rect x="50" y="115" width="60" height="60" rx="8" fill="#0f1118" stroke="#334155" />
+              </svg>
+
+              <button class="btn btn-outline btn-sm quick-view-btn" data-product="bx-backpack">Quick View</button>
+            </div>
+
+            <div class="product-details">
+              <div class="product-swatches">
+                <span class="swatch active" style="background: #141724;" data-color="#141724" title="Obsidian"></span>
+                <span class="swatch" style="background: #4a4e69;" data-color="#4a4e69" title="Slate Gray"></span>
+              </div>
+
+              <h3 class="product-name">Bronx EDC Commuter Pack</h3>
+              <p class="product-summary">Waterproof urban fortress featuring magnetic German Fidlock closures and dedicated padded suspension for 16" laptops.</p>
+
+              <div class="product-specs-row">
+                <div class="product-spec-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                  <span>22 Liters</span>
+                </div>
+                <div class="product-spec-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  <span>1.2 kg (2.6 lbs)</span>
+                </div>
+                <div class="product-spec-item">
+                  <span>Weatherproof</span>
+                </div>
+              </div>
+
+              <div class="product-card-footer">
+                <div class="product-price-block">
+                  <div class="product-price">$190</div>
+                  <div class="product-rating">★★★★★ <span>4.92 (780)</span></div>
+                </div>
+
+                <button class="btn btn-primary btn-sm btn-add-cart" data-name="Bronx EDC Commuter Pack" data-price="190" data-color="Obsidian">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         THE ONLINE SHOPPER'S SANCTUARY: ALL ISSUES SOLVED INTERACTIVELY
+         ======================================================================== -->
+    <section class="solutions-section" id="airline-checker">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>TRANSPARENT CONSUMER SANCTUARY</span>
+          </div>
+          <h2 class="section-title">EVERY LUGGAGE ANXIETY, SOLVED.</h2>
+          <p class="section-subtitle">
+            No gate-check surprises. No broken wheels. No deceptive pricing. We engineered our shopping tools to eliminate every single friction point of buying luggage online.
+          </p>
+        </div>
+
+        <!-- Navigation Tabs for the 4 Problem Solvers -->
+        <div class="solutions-nav">
+          <button class="solution-tab-btn active" data-tab="tab-airline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"></path>
+            </svg>
+            <span>Airline Size Checker</span>
+          </button>
+
+          <button class="solution-tab-btn" data-tab="tab-durability" id="durabilityTabBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Durability Matrix</span>
+          </button>
+
+          <button class="solution-tab-btn" data-tab="tab-weight" id="weightTabBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+            <span>Weight & Pack Estimator</span>
+          </button>
+
+          <button class="solution-tab-btn" data-tab="tab-trial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            <span>100-Day Real Flight Trial</span>
+          </button>
+        </div>
+
+        <!-- PANEL 1: AIRLINE OVERHEAD BIN COMPLIANCE CHECKER -->
+        <div class="solution-panel active" id="tab-airline">
+          <div class="checker-grid">
+            
+            <div class="airline-selector-box">
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">
+                Will it fit your airline's overhead bin?
+              </h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                Select from 40+ major global carriers below. We calculate whether the Bronx X1 Pro Carry-On passes strict gate inspection in real-time.
+              </p>
+
+              <div class="airline-input-group">
+                <label class="airline-label" for="airlineSelect">Select Your Airline:</label>
+                <select class="airline-select" id="airlineSelect">
+                  <option value="delta">Delta Air Lines (22" × 14" × 9")</option>
+                  <option value="united">United Airlines (22" × 14" × 9")</option>
+                  <option value="american">American Airlines (22" × 14" × 9")</option>
+                  <option value="ryanair">Ryanair Priority (21.6" × 15.7" × 7.8")</option>
+                  <option value="easyjet">EasyJet (22.0" × 17.7" × 9.8")</option>
+                  <option value="british">British Airways (22.0" × 17.7" × 9.8")</option>
+                  <option value="lufthansa">Lufthansa (21.6" × 15.7" × 9.0")</option>
+                  <option value="emirates">Emirates (21.6" × 14.9" × 7.8")</option>
+                  <option value="singapore">Singapore Airlines (22.0" × 15.7" × 9.0")</option>
+                  <option value="southwest">Southwest Airlines (24" × 16" × 10")</option>
+                  <option value="airfrance">Air France / KLM (21.7" × 13.8" × 9.8")</option>
+                  <option value="qatar">Qatar Airways (20.0" × 15.0" × 10.0")</option>
+                </select>
+              </div>
+
+              <div style="background: var(--bg-surface-elevated); padding: 1.25rem; border-radius: 12px; border: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--text-secondary);">
+                💡 <strong>Guarantee:</strong> If any airline ever forces you to gate-check the Bronx X1 due to sizing specifications on standard planes, send us the receipt and we credit you $50 toward travel.
+              </div>
+            </div>
+
+            <!-- Real-time Compliance Result Card -->
+            <div class="airline-result-card" id="airlineResultBox">
+              <div class="compliance-status">
+                <div class="compliance-icon" id="airlineResultIcon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="compliance-title" id="airlineStatusHeading">100% CARRY-ON COMPLIANT</div>
+                  <div style="font-size: 0.85rem; color: var(--text-muted);" id="airlineCarrierName">Delta Air Lines Official Policy</div>
+                </div>
+              </div>
+
+              <!-- Dimension Comparison Bars -->
+              <div class="dimension-compare-bars">
+                
+                <div class="dim-bar-wrap">
+                  <div class="dim-bar-header">
+                    <span>Height: Bronx 21.7" vs Allowed <strong id="allowedHeight">22.0"</strong></span>
+                    <span style="color: #10b981; font-weight: 700;">PASSES (-0.3")</span>
+                  </div>
+                  <div class="dim-progress-track">
+                    <div class="dim-progress-fill" style="width: 98%; background: #10b981;"></div>
+                  </div>
+                </div>
+
+                <div class="dim-bar-wrap">
+                  <div class="dim-bar-header">
+                    <span>Width: Bronx 14.4" vs Allowed <strong id="allowedWidth">14.0"</strong></span>
+                    <span style="color: #10b981; font-weight: 700;" id="widthPassStatus">IATA FLEX PASS</span>
+                  </div>
+                  <div class="dim-progress-track">
+                    <div class="dim-progress-fill" style="width: 97%; background: #10b981;"></div>
+                  </div>
+                </div>
+
+                <div class="dim-bar-wrap">
+                  <div class="dim-bar-header">
+                    <span>Depth: Bronx 9.0" vs Allowed <strong id="allowedDepth">9.0"</strong></span>
+                    <span style="color: #10b981; font-weight: 700;">EXACT FIT</span>
+                  </div>
+                  <div class="dim-progress-track">
+                    <div class="dim-progress-fill" style="width: 100%; background: #10b981;"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div style="font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;">
+                Verified under current IATA & FAA sizer box standards. Tested in Boeing 737, 777, 787 and Airbus A320, A350 overhead lockers.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PANEL 2: DURABILITY PROOF & HONEST COMPARISON MATRIX -->
+        <div class="solution-panel" id="tab-durability">
+          <div style="margin-bottom: 2rem; max-width: 720px;">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">
+              Honest Engineering vs The Luggage Industry
+            </h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Most luggage breaks within 18 months because brands optimize for cheap zippers and molded wheels. See how Bronx compares side-by-side.
+            </p>
+          </div>
+
+          <div class="durability-table-wrap">
+            <table class="durability-table">
+              <thead>
+                <tr>
+                  <th>FEATURE</th>
+                  <th class="bronx-col">BRONX LUGGAGE ($385)</th>
+                  <th>DEPARTMENT STORE ($160)</th>
+                  <th>LUXURY HERITAGE ($1,450)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Chassis Architecture</strong></td>
+                  <td class="bronx-col">Interlocking Aerospace Aluminum Frame (Zipper-Free)</td>
+                  <td>Cheap Nylon Coil Zipper (Blowout Risk)</td>
+                  <td>Aluminum Frame (Excessively heavy 4.6kg)</td>
+                </tr>
+                <tr>
+                  <td><strong>Wheel System</strong></td>
+                  <td class="bronx-col">Japanese Hinomoto Lisof® 360° Silent Suspension</td>
+                  <td>Generic noisy hollow plastic casters</td>
+                  <td>Dual ball bearing casters</td>
+                </tr>
+                <tr>
+                  <td><strong>Shell Material</strong></td>
+                  <td class="bronx-col">100% German Bayer Makrolon® (Crush-Resistant)</td>
+                  <td>Brittle recycled ABS blend (Cracks in cold)</td>
+                  <td>Thin Grooved Aluminum (Prone to permanent dents)</td>
+                </tr>
+                <tr>
+                  <td><strong>Warranty Policy</strong></td>
+                  <td class="bronx-col">Unconditional Lifetime (Free parts in 48h)</td>
+                  <td>1-Year Limited (Excludes airline damage)</td>
+                  <td>5-Year Limited (Requires $120 repair depot ship)</td>
+                </tr>
+                <tr>
+                  <td><strong>Repair Mechanism</strong></td>
+                  <td class="bronx-col">100% Screwed Modular Hardware (DIY 2-min fix)</td>
+                  <td>Riveted shut (Must discard entire suitcase)</td>
+                  <td>Factory rivets only</td>
+                </tr>
+                <tr>
+                  <td><strong>Return Policy</strong></td>
+                  <td class="bronx-col">100-Day Real Flight Trial (Full refund)</td>
+                  <td>30-Day unused tags only</td>
+                  <td>14-Day showroom condition only</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANEL 3: INTERACTIVE SMART PACKING WEIGHT ESTIMATOR -->
+        <div class="solution-panel" id="tab-weight">
+          <div class="weight-calc-grid">
+            
+            <div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">
+                Never Pay Overweight Baggage Fees Again
+              </h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                Calculate your estimated pack weight in real-time. Airlines typically enforce strict 7kg to 10kg carry-on thresholds.
+              </p>
+
+              <!-- Trip Duration selector -->
+              <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                1. TRIP DURATION:
+              </div>
+              <div class="trip-duration-selector">
+                <div class="trip-chip active" data-duration="weekend" data-base="3.2">
+                  <div>Weekend</div>
+                  <div style="font-size: 0.75rem; opacity: 0.8;">2-3 Days</div>
+                </div>
+                <div class="trip-chip" data-duration="week" data-base="5.4">
+                  <div>Business</div>
+                  <div style="font-size: 0.75rem; opacity: 0.8;">5-7 Days</div>
+                </div>
+                <div class="trip-chip" data-duration="long" data-base="8.6">
+                  <div>Expedition</div>
+                  <div style="font-size: 0.75rem; opacity: 0.8;">10-14 Days</div>
+                </div>
+              </div>
+
+              <!-- Gear checkboxes -->
+              <div style="font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                2. PACKED GEAR & TECH:
+              </div>
+              <div class="gear-toggle-group">
+                <label class="gear-check-label">
+                  <input type="checkbox" class="gear-checkbox" data-weight="1.6" checked />
+                  <span>16" Laptop + Charger (+1.6kg)</span>
+                </label>
+                <label class="gear-check-label">
+                  <input type="checkbox" class="gear-checkbox" data-weight="1.1" checked />
+                  <span>Extra Dress Shoes (+1.1kg)</span>
+                </label>
+                <label class="gear-check-label">
+                  <input type="checkbox" class="gear-checkbox" data-weight="1.4" />
+                  <span>Heavy Winter Coat (+1.4kg)</span>
+                </label>
+                <label class="gear-check-label">
+                  <input type="checkbox" class="gear-checkbox" data-weight="0.8" />
+                  <span>Camera / Drone Kit (+0.8kg)</span>
+                </label>
+                <label class="gear-check-label">
+                  <input type="checkbox" class="gear-checkbox" data-weight="0.6" checked />
+                  <span>Toiletry Capsule (+0.6kg)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Digital Scale Visual Display -->
+            <div class="scale-visual-card">
+              <span class="badge" style="margin-bottom: 0.5rem;">REAL-TIME ESTIMATED LOAD</span>
+              <div class="digital-scale-readout" id="scaleWeightValue">8.8 <span style="font-size: 1.5rem; font-weight: 500;">KG</span></div>
+              
+              <div style="font-size: 0.9rem; font-weight: 700; color: #10b981;" id="scaleSafetyBadge">
+                ✓ SAFE FOR ALL MAJOR GLOBAL AIRLINES
+              </div>
+              
+              <div class="scale-limit-bar">
+                <div class="scale-limit-fill" id="scaleProgressFill" style="width: 72%;"></div>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; width: 100%; max-width: 280px; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.4rem;">
+                <span>0 kg</span>
+                <span>7kg Limit</span>
+                <span>10kg Max</span>
+              </div>
+
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 1.5rem; max-width: 320px;">
+                Bronx X1 empty weight is only <strong>3.4 kg</strong> thanks to magnesium alloy reinforcement, leaving you ample headroom for souvenirs.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PANEL 4: 100-DAY REAL FLIGHT TRIAL GUARANTEE -->
+        <div class="solution-panel" id="tab-trial">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: center;">
+            <div>
+              <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">
+                Take It On Real Flights. Drag It Over Cobblestones.
+              </h3>
+              <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+                Most luggage companies void your warranty the moment you remove the plastic film or take a single flight. We do the exact opposite.
+              </p>
+              <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                We encourage you to pack it to the brim, check it on red-eyes, and roll it through rainy city streets for 100 days. If it is not the smoothest, toughest luggage you have ever rolled, return it. We cover return shipping anywhere on Earth and refund every cent.
+              </p>
+
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600;">
+                  <span style="color: #10b981;">✓</span> 100% Free Prepaid Return Label
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600;">
+                  <span style="color: #10b981;">✓</span> Instant Refund No Questions Asked
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600;">
+                  <span style="color: #10b981;">✓</span> Lifetime Damage Replacement
+                </div>
+              </div>
+            </div>
+
+            <div style="background: var(--bg-surface-elevated); padding: 2.5rem; border-radius: 20px; border: 1px solid var(--border-medium); text-align: center;">
+              <div style="font-size: 3.5rem; font-weight: 800; font-family: var(--font-display); color: var(--accent-cyan); line-height: 1;">
+                100
+              </div>
+              <div style="font-size: 1.1rem; font-weight: 700; text-transform: uppercase; margin: 0.5rem 0 1rem;">
+                Day In-Flight Trial
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                Over 140,000 travelers have put Bronx luggage to the test in 84 countries with a 99.96% retention rate.
+              </p>
+              <a href="#products" class="btn btn-primary" style="width: 100%;">
+                Start Your Risk-Free Trial
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ABOUT THE COMPANY SECTION ("THE FOUNDRY STORY & CRAFTSMANSHIP")
+         ======================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        
+        <div class="about-grid">
+          
+          <!-- Story Details -->
+          <div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              <span>BORN IN SOUTH BRONX, NEW YORK</span>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 1rem; margin-bottom: 1.25rem;">
+              FORGED FROM RELENTLESS INDUSTRIAL RESILIENCE
+            </h2>
+
+            <p class="about-story-text">
+              Bronx Luggage was founded in an old iron foundry in the South Bronx by former aerospace engineers and obsessive travelers. Frustrated by $1,400 heritage brands that dented on the first flight and $150 high-street bags whose zippers burst open on terminal carousels, we set out to build an unbreakable travel chassis.
+            </p>
+
+            <p class="about-story-text">
+              We eliminated the zipper entirely. We replaced cheap molded plastic with aircraft-spec 6061-T6 aluminum and Bayer Makrolon®. Every single component is engineered to be infinitely repairable with modular screws—because true luxury is a product that outlives its owner.
+            </p>
+
+            <!-- 4 Pillars -->
+            <div class="pillars-grid">
+              <div class="pillar-item">
+                <div class="pillar-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <div class="pillar-title">Direct Foundry Pricing</div>
+                <div class="pillar-desc">No Madison Ave flagship rent, no distributor markups. 100% of your dollars go into aerospace metallurgy.</div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                </div>
+                <div class="pillar-title">Lifetime Spare Parts</div>
+                <div class="pillar-desc">Every part is numbered. Request a free replacement wheel, handle, or lock anytime. Ships globally in 48 hours.</div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                </div>
+                <div class="pillar-title">Circular Sustainability</div>
+                <div class="pillar-desc">Interior linings are crafted from 100% recycled ocean plastics. Zero single-use styrofoam in our packaging.</div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div class="pillar-title">Aviation Tested</div>
+                <div class="pillar-desc">Subjected to 5,000 continuous handle drop cycles and 50km cobblestone treadmill stress tests.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Foundry Graphic & Live Heritage Stamp -->
+          <div class="about-imagery">
+            <svg viewBox="0 0 540 500" width="100%" height="480" style="background: var(--bg-surface-elevated); display: block;">
+              <defs>
+                <linearGradient id="metalFoundry" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--accent-cyan)" stop-opacity="0.15" />
+                  <stop offset="100%" stop-color="var(--bg-primary)" stop-opacity="0.6" />
+                </linearGradient>
+              </defs>
+              <rect width="540" height="500" fill="url(#metalFoundry)" />
+              
+              <!-- Blueprint Grid Lines -->
+              <g stroke="var(--border-subtle)" stroke-width="1">
+                <line x1="0" y1="100" x2="540" y2="100" />
+                <line x1="0" y1="200" x2="540" y2="200" />
+                <line x1="0" y1="300" x2="540" y2="300" />
+                <line x1="0" y1="400" x2="540" y2="400" />
+                <line x1="100" y1="0" x2="100" y2="500" />
+                <line x1="200" y1="0" x2="200" y2="500" />
+                <line x1="300" y1="0" x2="300" y2="500" />
+                <line x1="400" y1="0" x2="400" y2="500" />
+              </g>
+
+              <!-- Technical Suitcase Blueprint Outline -->
+              <rect x="140" y="80" width="260" height="340" rx="36" fill="none" stroke="var(--accent-cyan)" stroke-width="2" stroke-dasharray="8 4" opacity="0.85" />
+              <rect x="160" y="100" width="220" height="300" rx="28" fill="rgba(var(--accent-cyan-rgb), 0.04)" stroke="var(--border-medium)" stroke-width="1.5" />
+              
+              <!-- Center Axis & Dial Coordinates -->
+              <line x1="270" y1="60" x2="270" y2="440" stroke="var(--accent-amber)" stroke-width="1.5" />
+              <circle cx="270" cy="250" r="45" fill="none" stroke="var(--accent-cyan)" stroke-width="1" />
+              <circle cx="270" cy="250" r="4" fill="var(--accent-cyan)" />
+              
+              <!-- Blueprint Annotations -->
+              <text x="180" y="60" fill="var(--accent-cyan)" font-family="JetBrains Mono" font-size="11">TOLERANCE ±0.02MM</text>
+              <text x="170" y="445" fill="var(--text-muted)" font-family="JetBrains Mono" font-size="11">BRONX AEROSPACE CHASSIS V4</text>
+            </svg>
+
+            <div class="about-floating-stamp">
+              <div class="stamp-year">EST. 2018</div>
+              <div class="stamp-caption">South Bronx Foundry • 140,000+ Journeys Logged</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Scroll-Triggered Counter Numbers -->
+        <div class="metrics-band" id="metricsCounters">
+          <div class="metric-stat-box">
+            <div class="metric-number" data-target="140">0</div>
+            <div class="metric-label">Thousand Flights Logged</div>
+          </div>
+          <div class="metric-stat-box">
+            <div class="metric-number" data-target="50">0</div>
+            <div class="metric-label">KM Wheel Cobblestone Test</div>
+          </div>
+          <div class="metric-stat-box">
+            <div class="metric-number" data-target="100">0</div>
+            <div class="metric-label">% Zipperless Clamshell Design</div>
+          </div>
+          <div class="metric-stat-box">
+            <div class="metric-number" data-target="99">0</div>
+            <div class="metric-label">% Customer Retention Rate</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div>
+          <a href="#" class="brand-logo">
+            <div class="brand-symbol"></div>
+            <span>BRONX</span>
+            <span class="brand-text-accent">NYC LABS</span>
+          </a>
+          <p class="footer-brand-bio">
+            Indestructible aerospace travel gear. Born in New York, engineered to traverse every continent without failure.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Fleet</h4>
+          <ul class="footer-links">
+            <li><a href="#products">Bronx X1 Pro Carry-On</a></li>
+            <li><a href="#products">Bronx X2 Continental Check-In</a></li>
+            <li><a href="#products">Bronx X3 Heavy Trunk</a></li>
+            <li><a href="#products">Modular Tech Duffel</a></li>
+            <li><a href="#products">Commuter Backpack</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Engineering</h4>
+          <ul class="footer-links">
+            <li><a href="#unboxing">Chassis Anatomy</a></li>
+            <li><a href="#airline-checker">Airline Fit Guide</a></li>
+            <li><a href="#durability">Durability Testing</a></li>
+            <li><a href="#weight-calc">Weight Estimator</a></li>
+            <li><a href="#about">The Foundry Heritage</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Traveler Sanctuary</h4>
+          <ul class="footer-links">
+            <li><a href="#tab-trial">100-Day In-Flight Trial</a></li>
+            <li><a href="#">Lifetime Warranty Claim</a></li>
+            <li><a href="#">Free 48h Parts Dispatch</a></li>
+            <li><a href="#">Track Flight Order</a></li>
+            <li><a href="#">Contact Engineering Team</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Bronx Luggage Inc. All rights reserved. Designed with precision in New York.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-muted);">Privacy Policy</a>
+          <a href="#" style="color: var(--text-muted);">Terms of Service</a>
+          <a href="#" style="color: var(--text-muted);">Aviation Compliance Notice</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       INTERACTIVE LUGGAGE FINDER QUIZ MODAL
+       ======================================================================== -->
+  <div class="modal-overlay" id="quizModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="quizCloseBtn" aria-label="Close Quiz">✕</button>
+
+      <div id="quizContent">
+        <div class="badge" style="margin-bottom: 0.75rem;">
+          <span>FIND YOUR PERFECT BRONX LUGGAGE</span>
+        </div>
+        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;" id="quizQuestionTitle">
+          What is your most frequent travel style?
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;" id="quizStepMeta">
+          Step 1 of 3
+        </p>
+
+        <!-- Dynamic Options Container -->
+        <div id="quizOptionsContainer" style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+        </div>
+      </div>
+
+      <!-- Result View -->
+      <div id="quizResultView" style="display: none; text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎯</div>
+        <div class="badge" style="margin-bottom: 0.5rem; background: rgba(16, 185, 129, 0.15); color: #10b981;">PERFECT MATCH FOUND</div>
+        <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem;" id="quizResultName">Bronx X1 Pro Carry-On</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;" id="quizResultReason">
+          Matches your 3-5 day quick turnaround trips, overhead bin compliance, and tech gear requirements.
+        </p>
+        <button class="btn btn-primary" id="quizAddToCartBtn" style="width: 100%;">
+          Add Matched Luggage to Bag (20% Code Auto-Applied)
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       PRODUCT QUICK VIEW MODAL
+       ======================================================================== -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-card" style="max-width: 700px;">
+      <button class="modal-close-btn" id="quickViewCloseBtn" aria-label="Close Quick View">✕</button>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;" class="quick-view-grid">
+        <div style="text-align: center;" id="quickViewVisualArea">
+        </div>
+        <div>
+          <div class="badge" id="quickViewBadge" style="margin-bottom: 0.5rem;">AEROSPACE GRADE</div>
+          <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem;" id="quickViewTitle">Bronx X1 Pro</h3>
+          <div style="font-size: 1.5rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 1rem;" id="quickViewPrice">$385</div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;" id="quickViewDescription">
+            Complete aerospace aluminum extrusion frame with zero zippers.
+          </p>
+
+          <button class="btn btn-primary" id="quickViewAddBtn" style="width: 100%;">
+            Add to Bag
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SLIDE-OUT CART DRAWER
+       ======================================================================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span style="font-weight: 700; font-size: 1.1rem;">YOUR TRAVEL BAG</span>
+        <span class="badge" id="cartDrawerCount">1 Item</span>
+      </div>
+      <button class="modal-close-btn" id="cartCloseBtn" aria-label="Close Bag">✕</button>
+    </div>
+
+    <!-- Free shipping progress bar -->
+    <div style="padding: 0.75rem 2rem; background: var(--bg-surface-elevated); border-bottom: 1px solid var(--border-subtle); font-size: 0.8rem;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+        <span id="shippingProgressText">⚡ Free Worldwide Priority Express Unlocked!</span>
+      </div>
+      <div style="height: 4px; background: var(--bg-primary); border-radius: 9999px; overflow: hidden;">
+        <div style="width: 100%; height: 100%; background: #10b981;" id="shippingProgressBar"></div>
+      </div>
+    </div>
+
+    <div class="cart-body" id="cartItemsContainer">
+    </div>
+
+    <div class="cart-footer">
+      <!-- Promo code field -->
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+        <input type="text" id="promoInput" placeholder="Promo code (e.g. BRONX20)" style="flex-grow: 1; padding: 0.65rem 1rem; border-radius: 8px; background: var(--bg-surface); border: 1px solid var(--border-medium); color: var(--text-primary); font-size: 0.85rem; outline: none;" />
+        <button class="btn btn-outline btn-sm" id="applyPromoBtn">Apply</button>
+      </div>
+
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$385.00</span>
+      </div>
+      <div class="cart-summary-row" id="cartDiscountRow" style="display: none; color: #10b981;">
+        <span>Promo Discount (20%)</span>
+        <span id="cartDiscountAmount">-$77.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Worldwide Shipping</span>
+        <span style="color: #10b981; font-weight: 700;">FREE</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Total Due</span>
+        <span id="cartTotal">$385.00</span>
+      </div>
+
+      <button class="btn btn-primary" id="checkoutBtn" style="width: 100%;">
+        Proceed to Secure Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Notification Toast -->
+  <div class="toast-notice" id="toastNotice">
+    <span id="toastIcon">✓</span>
+    <span id="toastMessage">Item added to your travel bag</span>
+  </div>
+
+  <!-- Vite entrypoint script -->
+  <script type="module" src="js/shop.js"></script>
+</body>
+</html>
